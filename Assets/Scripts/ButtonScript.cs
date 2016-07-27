@@ -12,6 +12,7 @@ public class ButtonScript : MonoBehaviour {
 	protected static bool modoLibre;
 		
 	void Start() {
+		dualJoystick.GetComponent<Canvas>().enabled = false;
 		fpsController.GetComponent<CharacterController>().enabled = false;
 		modoLibre = false;
 	}
@@ -49,7 +50,7 @@ public class ButtonScript : MonoBehaviour {
         animCamera.GetComponent<Camera>().enabled = false;
         freeCamera.GetComponent<Camera>().enabled = true;
 		fpsController.GetComponent<CharacterController>().enabled = true;
-        dualJoystick.GetComponent<Canvas>().enabled = true;
+//        dualJoystick.GetComponent<Canvas>().enabled = true;
         // escondo panel de botones
         UIPanel.SetActive(false);
         MenuButton.SetActive(true);
