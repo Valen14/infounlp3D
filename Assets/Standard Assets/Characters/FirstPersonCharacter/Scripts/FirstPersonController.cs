@@ -61,7 +61,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
-            RotateView();
+// SEGUN answers.unity3d.com/questions/835931
+ //           RotateView();
+			float rotation = CrossPlatformInputManager.GetAxis ("Rotate") * 10.0f;
+			rotation *= Time.deltaTime;
+			transform.Rotate (0, rotation, 0);
+
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
             {
