@@ -62,11 +62,21 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void Update()
         {
 // SEGUN answers.unity3d.com/questions/835931
- //           RotateView();
+#if !MOBILE_INPUT
+            RotateView();
+#endif
+
+#if MOBILE_INPUT
+			// Rotacion del cuerpo
 			float rotation = CrossPlatformInputManager.GetAxis ("Rotate") * 10.0f;
 			rotation *= Time.deltaTime;
 			transform.Rotate (0, rotation, 0);
 
+			// Pan de la cabeza
+			float protation = CrossPlatformInputManager.GetAxis ("Pan") * 10.0f;
+			protation *= Time.deltaTime;
+			m_Camera.transform.Rotate (protation, 0, 0);
+#endif
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
             {
