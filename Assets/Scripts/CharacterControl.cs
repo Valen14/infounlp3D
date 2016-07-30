@@ -6,14 +6,14 @@ public class CharacterControl : MonoBehaviour {
 
 	public GameObject fpsController;
 	protected int speed = 0;
-	protected int speedImpulse = 10;
+	protected int speedImpulse = 2;
 	protected int speedDecay = 1;
 	protected int rotation = 0;
-	protected int rotationImpulse = 100;
-	protected int rotationDecay = 10;
+	protected int rotationImpulse = 25;
+	protected int rotationDecay = 5;
 	protected int pan = 0;
-	protected int panImpulse = 100;
-	protected int panDecay = 10;
+	protected int panImpulse = 25;
+	protected int panDecay = 5;
 	protected float axisFactor = 10.0f;
 
 	GUIStyle style;

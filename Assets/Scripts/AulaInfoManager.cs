@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
+using System;
 
 public class AulaInfoManager : MonoBehaviour {
 
@@ -45,10 +47,19 @@ public class AulaInfoManager : MonoBehaviour {
 	/** Se completó la actividad de busqueda y parseo de los datos? */
 	public bool fetchComplete = false;
 
+	/** Status actual de pre-carga */
+	public string currentStatus = null;
+
 
 
 	public void Start() {
+		currentStatus = "Cargando información de las aulas...";
 		loadAllSchedules ();
+	}
+
+	void OnGUI() {
+		if (currentStatus != null)
+			GUI.Label(new Rect(10, 10, Screen.width - 10, 22), currentStatus);
 	}
 
 	static AulaInfoManager() {
@@ -107,6 +118,7 @@ public class AulaInfoManager : MonoBehaviour {
 		} while (pendingTasks > 0);
 		Debug.Log ("Finalizado!");
 		fetchComplete = true;
+		currentStatus = null;
 		printCompleteSchedule();
 	}
 
@@ -118,18 +130,24 @@ public class AulaInfoManager : MonoBehaviour {
 		WWW www = new WWW (url);
 		yield return www;
 
-		// Parse de info recuperada
-		AulaSchedule aSchedule = JsonUtility.FromJson<AulaSchedule> ("{ \"values\": " + www.text + "}");
-		aSchedule.aulaID = aulaID;
-		aSchedule.aulaName = aulas [aulaID];
-		aSchedule.quarter = quarter;
+		try {
+			// Parse de info recuperada
+			AulaSchedule aSchedule = JsonUtility.FromJson<AulaSchedule> ("{ \"values\": " + www.text + "}");
+			aSchedule.aulaID = aulaID;
+			aSchedule.aulaName = aulas [aulaID];
+			aSchedule.quarter = quarter;
 
-		// Guardar en estructura general de schedules
-//		Debug.Log(aSchedule.ToString());
-		scheduleByAula[quarter].Add (aulaID, aSchedule);
-		// Guardar en agenda semanal de actividades
-		fillWeeklySchedule (aulaID, quarter, false);	
-		pendingTasks--;
+			// Guardar en estructura general de schedules
+	//		Debug.Log(aSchedule.ToString());
+			scheduleByAula[quarter].Add (aulaID, aSchedule);
+			// Guardar en agenda semanal de actividades
+			fillWeeklySchedule (aulaID, quarter, false);	
+			pendingTasks--;
+		} 
+		catch (Exception e) {
+			currentStatus = "Sin conexión a sistema de gestión de aulas. Modo offline unicamente.";
+			throw e;
+		}
 	}
 
 
