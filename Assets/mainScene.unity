@@ -102,7 +102,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3059681
 RectTransform:
   m_ObjectHideFlags: 0
@@ -496,7 +496,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Buffet
+  m_Text: BUFFET
 --- !u!222 &65305162
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -849,7 +849,7 @@ RectTransform:
   m_Children:
   - {fileID: 65305160}
   m_Father: {fileID: 1555029204}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -120}
@@ -1242,10 +1242,10 @@ RectTransform:
   - {fileID: 722177369}
   m_Father: {fileID: 1555029204}
   m_RootOrder: 11
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -45, y: 25}
-  m_SizeDelta: {x: 70, y: 40}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 25}
+  m_SizeDelta: {x: 160, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &323074275
 MonoBehaviour:
@@ -1551,7 +1551,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Alumnos
+  m_Text: ALUMNOS
 --- !u!222 &347937609
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -111985,15 +111985,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: 2169821f0567671499a5c10104c69c24, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: 2169821f0567671499a5c10104c69c24, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100010, guid: 2169821f0567671499a5c10104c69c24, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400006, guid: 2169821f0567671499a5c10104c69c24, type: 2}
       propertyPath: m_FontData.m_Font
@@ -112411,7 +112411,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Salir
+  m_Text: SALIR
 --- !u!222 &722177371
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -112598,7 +112598,7 @@ RectTransform:
   m_Children:
   - {fileID: 347937607}
   m_Father: {fileID: 1555029204}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -75}
@@ -112988,7 +112988,7 @@ RectTransform:
   m_Children:
   - {fileID: 2114742268}
   m_Father: {fileID: 1555029204}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -165}
@@ -113689,7 +113689,7 @@ RectTransform:
   m_Children:
   - {fileID: 49067788}
   m_Father: {fileID: 1555029204}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -35, y: -255}
@@ -113954,6 +113954,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 3059681}
+  - {fileID: 1867510253}
   - {fileID: 795019225}
   - {fileID: 153905946}
   - {fileID: 992060417}
@@ -113963,7 +113964,6 @@ RectTransform:
   - {fileID: 1631340358}
   - {fileID: 1319639522}
   - {fileID: 1810712230}
-  - {fileID: 1867510253}
   - {fileID: 323074274}
   m_Father: {fileID: 1839149844}
   m_RootOrder: 2
@@ -114104,7 +114104,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1555029204}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -255}
@@ -114338,9 +114338,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Modo
-
-    Libre'
+  m_Text: MODO LIBRE
 --- !u!222 &1688062948
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -114378,7 +114376,7 @@ RectTransform:
   m_Children:
   - {fileID: 267744818}
   m_Father: {fileID: 1555029204}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -85, y: -210}
@@ -114498,7 +114496,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1555029204}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -210}
@@ -114651,7 +114649,7 @@ RectTransform:
   m_Children:
   - {fileID: 698070839}
   m_Father: {fileID: 1555029204}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -85, y: -255}
@@ -114990,7 +114988,7 @@ RectTransform:
   m_Children:
   - {fileID: 1367624641}
   m_Father: {fileID: 1555029204}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -35, y: -210}
@@ -115112,11 +115110,11 @@ RectTransform:
   m_Children:
   - {fileID: 1688062946}
   m_Father: {fileID: 1555029204}
-  m_RootOrder: 10
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 45, y: 25}
-  m_SizeDelta: {x: 70, y: 40}
+  m_RootOrder: 1
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -30}
+  m_SizeDelta: {x: 160, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1867510254
 MonoBehaviour:
@@ -115307,7 +115305,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Vista A\xE9rea"
+  m_Text: VISTA AEREA
 --- !u!222 &2114742270
 CanvasRenderer:
   m_ObjectHideFlags: 0

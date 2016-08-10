@@ -14,7 +14,7 @@ public class ButtonScript : MonoBehaviour {
 	void Start() {
 		dualJoystick.GetComponent<Canvas>().enabled = false;
 		fpsController.GetComponent<CharacterController>().enabled = false;
-		modoLibre = false;
+		freeMode(); // modoLibre = false;
 	}
 
 	// ESTA EN MODO LIBRE?
