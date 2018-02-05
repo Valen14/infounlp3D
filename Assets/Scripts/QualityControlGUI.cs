@@ -13,9 +13,11 @@ public class QualityControlGUI : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		/*
 		#if MOBILE_INPUT	
 		farClipping = 60;
 		#endif
+		*/
 	}
 	
 	// Update is called once per frame
